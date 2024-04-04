@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="greengrocery_storeDataSet1" targetNamespace="http://tempuri.org/greengrocery_storeDataSet1.xsd" xmlns:mstns="http://tempuri.org/greengrocery_storeDataSet1.xsd" xmlns="http://tempuri.org/greengrocery_storeDataSet1.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="greengrocery_storeConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="greengrocery_storeConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.GreengroceryStore.Properties.Settings.GlobalReference.Default.greengrocery_storeConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ПродуктTableAdapter" GeneratorDataComponentClassName="ПродуктTableAdapter" Name="Продукт" UserDataComponentName="ПродуктTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="greengrocery_storeConnectionString (Settings)" DbObjectName="greengrocery_store.dbo.Продукт" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT Название, КоличествоНаСкладе FROM dbo.Продукт</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Название" DataSetColumn="Название" />
+              <Mapping SourceColumn="КоличествоНаСкладе" DataSetColumn="КоличествоНаСкладе" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="greengrocery_storeDataSet1" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_UserDSName="greengrocery_storeDataSet1" msprop:Generator_DataSetName="greengrocery_storeDataSet1">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Продукт" msprop:Generator_RowEvHandlerName="ПродуктRowChangeEventHandler" msprop:Generator_RowDeletedName="ПродуктRowDeleted" msprop:Generator_RowDeletingName="ПродуктRowDeleting" msprop:Generator_RowEvArgName="ПродуктRowChangeEvent" msprop:Generator_TablePropName="Продукт" msprop:Generator_RowChangedName="ПродуктRowChanged" msprop:Generator_RowChangingName="ПродуктRowChanging" msprop:Generator_TableClassName="ПродуктDataTable" msprop:Generator_RowClassName="ПродуктRow" msprop:Generator_TableVarName="tableПродукт" msprop:Generator_UserTableName="Продукт">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Название" msprop:Generator_ColumnPropNameInRow="Название" msprop:Generator_ColumnPropNameInTable="НазваниеColumn" msprop:Generator_ColumnVarNameInTable="columnНазвание" msprop:Generator_UserColumnName="Название">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="КоличествоНаСкладе" msprop:Generator_ColumnPropNameInRow="КоличествоНаСкладе" msprop:Generator_ColumnPropNameInTable="КоличествоНаСкладеColumn" msprop:Generator_ColumnVarNameInTable="columnКоличествоНаСкладе" msprop:Generator_UserColumnName="КоличествоНаСкладе" type="xs:int" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
